@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolltelling - Championnat Karaté Marseille</title>
+  <style>
+    :root {
+      --main-color: #d72638;
+      --bg-color: #fefefe;
+      --accent-color: #333;
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background-color: var(--bg-color);
+      color: var(--accent-color);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+
+    .hero {
+      background-image: url('hero-marseille.jpg');
+    }
+
+    .parallax h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .quote {
+      font-style: italic;
+      margin: 30px 0;
+      padding: 20px;
+      max-width: 700px;
+      background: rgba(255,255,255,0.9);
+      border-left: 5px solid var(--main-color);
+      color: var(--accent-color);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    .scroll-section {
+      padding: 60px 20px;
+      background-color: #fff;
+      transition: transform 0.5s ease;
+    }
+
+    .scroll-section:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    footer {
+      background: var(--main-color);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="parallax hero">
+    <h1>Championnat de France de Karaté - Marseille</h1>
+    <p>Un week-end d’émotions et d'exploits</p>
+  </section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Zélie, 3e en Division 2</h2>
+    <div class="quote">«J'ai ressenti de la joie de participer à cette compétition, qui en plus était à Marseille et avec ma copine Cléophée ! D'être sur le podium et de me dire que j'en suis arrivée là, même si je n'ai vraiment réalisé que le lendemain.J’ai gagné confiance en moi et je n’ai pas baissé les bras. 
+J'aime le karaté parce que ça m'épanouit. J'aime ce sport parce qu'il bouge. J'apprends à me défendre et à relâcher mes émotions. On a de la chance qu'une championne nous coache. Elle m'a donné pleins de conseils et on a passé de bons moments parce qu'elle est rigolote. Elle était à notre écoute et c'était agréable. » </div>
+    <img src="images/zelie-podium.jpg" alt="Zélie sur le podium">
+  </section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Cléophée, 5e en Division 2</h2>
+    <div class="quote">"J'ai passé que des bons moments. A part quand j'ai compris que j'avais perdu et que je n'aurai pas de médaille. Mais le week-end à Marseille a été génial. On a visité Marseille et j'ai pu dormir dans la même chambre que Zélie. On a bien profité, nous avons même pu se baigner le samedi et le dimanche. Le moment où on rentre dans le palais des sports par l'entrée des athlètes, et que maman n'avait pas le droit de m'accompagner. J'ai eu l'impression que j'étais comme mon papa, une professionnelle mais de karaté. Mais je ne me rendais pas compte à ce moment-là que j'étais en coupe de France encore. Et de rentrer sur les tatamis avec là musique de Jul j'ai adoré.J'ai compris ne pourrai pas gagner tout le temps. Je n'aurai pas une médaille à chaque fois. 
+Mais que malgré tout, j'ai passé des moments incroyables avec Marylou notre coach, Zélie m'a copine, ses parents et ma maman.Je me sent suis bien au karaté. Je me suis fais des amis. Et j'ai une super coach Jessica, qui me fait entraînement 2 fois par semaine. C'est la meilleure du karaté. Au karaté, je peux bouger, rire, parfois trop souvent, et j'apprends de nouvelles choses à chaque fois. Je peux valider des passages de ceinture dans l'année et je peux faire des compétitions. Mais ce que je préfère c'est les entraînements. On est tous ensemble. On forme une équipe. L'esprit d'équipe ! » 
+J'avais déjà eu Marylou en entraînement. Mais en en coach c'est la première fois. Elle est différente. Elle vie la compétition à fond comme si c'était elle qui combattait à notre place. J'espère qu'elle sera ma coach si je suis sélectionnée l'année prochaine. Elle a fait toute la visite de Marseille avec nous, comme si nous étions une famille en vacances à Marseille. »
+    </div>
+    <video src="images/cleophee-tatami.mp4" controls autoplay muted loop playsinline style="max-width:100%; border-radius:10px;"></video>
+  </section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Marylou, coach & championne</h2>
+    <div class="quote">"Elle vit la compétition à fond, comme si elle combattait avec nous."</div>
+    <video src="images/marylou-coach.mp4" controls autoplay muted loop playsinline style="max-width:100%; border-radius:10px;"></video>
+  </section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Gabin (kata)</h2>
+    <div class="quote">"C'était impressionnant, cool et intéressant. J'y ai pris beaucoup de plaisir. J'ai été très marqué par la force des champions. Ça me motive à travailler encore plus, sans oublier l'objectif principal, s'amuser.
+J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à se surpasser, à s'entraider, et qu'on s'amuse bien avec notre prof Jessica et avec Loïc son assistant 😊 "</div>
+    <img src="images/gabin-kata.jpg" alt="Gabin en kata">
+  </section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Section Haut Niveau</h2>
+    <div class="quote">"À chaque fois, une leçon de vie." - Sarah</div>
+    <img src="images/haut-niveau.jpg" alt="Section Haut Niveau">
+  </section>
+  
+  <section class="scroll-section">
+  <h2 class="section-title">Léonard, section Haut Niveau</h2>
+  <div class="quote">"Témoignage" - Léonard</div>
+  <img src="images/leonard.jpg" alt="Léonard en compétition">
+</section>
+   <section class="scroll-section">
+  <h2 class="section-title">Thibault, section Haut Niveau</h2>
+  <div class="quote">"Témoignage" - Thibault</div>
+  <img src="images/thibault.jpg" alt="Thibault en compétition">
+</section>
+
+  <section class="scroll-section">
+    <h2 class="section-title">Les parents témoignent</h2>
+    <div class="quote">"Fierté, stress, rires et larmes… un souvenir à vie."</div>
+    <img src="images/parents-groupe.jpg" alt="Parents à Marseille">
+  </section>
+
+  <section class="scroll-section">
+  <h2 class="section-title">Virginie, maman de Sarah</h2>
+  <div class="quote">"C'est le point final d'une année intense en compétitions. Il faut beaucoup de discipline, c'est très stressant. Sarah a beaucoup évolué mais il y a toujours à apprendre."</div>
+  <img src="images/virginie-sarah.jpg" alt="Virginie, maman de Sarah">
+</section>
+
+<section class="scroll-section">
+  <h2 class="section-title">Parent de Léonard</h2>
+  <div class="quote">"[Témoignage à insérer]"</div>
+  <img src="images/parent-leonard.jpg" alt="Parent de Léonard">
+</section>
+
+<section class="scroll-section">
+  <h2 class="section-title">Parent de Thibault</h2>
+  <div class="quote">"[Témoignage à insérer]"</div>
+  <img src="images/parent-thibault.jpg" alt="Parent de Thibault">
+</section>
+
+<section class="scroll-section">
+  <h2 class="section-title">Aude et Édouard, parents de Zélie</h2>
+  <div class="quote">"Nous avons d'abord été surpris de la qualification des filles pour Marseille et nous les avons vues progresser très rapidement au cours de l'année, grâce aux entraînements de Jessica et ceux proposés par les jeunes du FKS. Plus la compétition approchait plus elles étaient investies. Nous sommes très fiers d'elles. Cette expérience nous a permis de créer des liens avec les autres parents de la Châtaigneraie et de profiter d'un super week-end à Marseille. Pour résumer, de belles rencontres et beaucoup d'émotions !"</div>
+  <img src="images/aude-edouard.jpg" alt="Aude et Édouard, parents de Zélie">
+</section>
+
+<section class="scroll-section">
+  <h2 class="section-title">Pauline, maman de Cléophée</h2>
+  <div class="quote">"J'ai passé un super week-end. Des liens se créent. Nous, les parents, avons profité avec les filles et Marylou. Mais surtout, on a vibré, stressé, crié et pleuré. J'ai été très surprise de l'organisation. La claque en arrivant. Ma fille arrivait en Coupe de France ! Musique, timing, règles... la cour des grands. Je suis super fière de ma fille. Après 18 mois de karaté, en arriver là, elle n'arrête pas de me surprendre. Bravo à toutes les deux. Et à nous aussi."</div>
+  <img src="images/pauline-cleophee.jpg" alt="Pauline, maman de Cléophée">
+</section>
+
+<section class="scroll-section">
+  <h2 class="section-title">Guillaume et Réjane, parents de Gabin</h2>
+  <div class="quote">"C'était très impressionnant, le niveau de certains enfants est admirable. Gabin a beaucoup progressé depuis qu'il a commencé. Nous sommes très fiers de lui, qui est arrivé en Coupe de France lors de sa première année de compétitions ! L'ambiance est assez festive et entraînante. Nous aimons beaucoup l'esprit du karaté, qui tourne autour du respect, de l'entraide, et de la rigueur, et nous voyons que notre fils aime beaucoup ce qu'il fait."</div>
+  <img src="images/guillaume-rejane.jpg" alt="Guillaume et Réjane, parents de Gabin">
+</section>
+
+  <footer>
+    <h2>À suivre...</h2>
+    <p>Rendez-vous l'année prochaine pour de nouvelles aventures !</p>
+  </footer>
+
+</body>
+</html>
