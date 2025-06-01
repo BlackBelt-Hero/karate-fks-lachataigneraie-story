@@ -32,6 +32,14 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .parallax {
@@ -77,7 +85,6 @@
     .scroll-section {
       padding: 60px 20px;
       background-color: #fff;
-      transition: transform 0.5s ease;
     }
 
     .scroll-section:nth-child(even) {
@@ -91,15 +98,19 @@
       text-align: center;
     }
   </style>
+   <audio id="background-audio" autoplay loop muted>
+    <source src="musique-douce.mp3" type="audio/mpeg">
+    Votre navigateur ne supporte pas l'audio HTML5.
+  </audio>
 </head>
 <body>
 
-  <section class="parallax hero">
+  <section class="parallax hero visible">
     <h1>Championnat de France de Karaté - Marseille</h1>
     <p>Un week-end d’émotions et d'exploits</p>
   </section>
 
-  <section class="scroll-section">
+    <section class="scroll-section">
     <h2 class="section-title">Zélie, 3e en Division 2</h2>
     <div class="quote">«J'ai ressenti de la joie de participer à cette compétition, qui en plus était à Marseille et avec ma copine Cléophée ! D'être sur le podium et de me dire que j'en suis arrivée là, même si je n'ai vraiment réalisé que le lendemain.J’ai gagné confiance en moi et je n’ai pas baissé les bras. 
 J'aime le karaté parce que ça m'épanouit. J'aime ce sport parce qu'il bouge. J'apprends à me défendre et à relâcher mes émotions. On a de la chance qu'une championne nous coache. Elle m'a donné pleins de conseils et on a passé de bons moments parce qu'elle est rigolote. Elle était à notre écoute et c'était agréable. » </div>
@@ -117,7 +128,7 @@ J'avais déjà eu Marylou en entraînement. Mais en en coach c'est la première 
 
   <section class="scroll-section">
     <h2 class="section-title">Marylou, coach & championne</h2>
-    <div class="quote">"Elle vit la compétition à fond, comme si elle combattait avec nous."</div>
+    <div class="quote">"[Témoignage à insérer]"</div>
     <video src="images/marylou-coach.mp4" controls autoplay muted loop playsinline style="max-width:100%; border-radius:10px;"></video>
   </section>
 
@@ -129,14 +140,14 @@ J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à 
   </section>
 
   <section class="scroll-section">
-    <h2 class="section-title">Section Haut Niveau</h2>
+    <h2 class="section-title">Sarah, Section Haut Niveau</h2>
     <div class="quote">"À chaque fois, une leçon de vie." - Sarah</div>
     <img src="images/haut-niveau.jpg" alt="Section Haut Niveau">
   </section>
   
   <section class="scroll-section">
   <h2 class="section-title">Léonard, section Haut Niveau</h2>
-  <div class="quote">"Témoignage" - Léonard</div>
+  <div class="quote">"J'étais très content à l'idée d'y participer car ce n'est pas tout les jours que cela arrive. j'ai appris que même si on gagne, il y aura toujours quelqu'un de plus fort que nous, rien n'est joué d'avance." - Léonard</div>
   <img src="images/leonard.jpg" alt="Léonard en compétition">
 </section>
    <section class="scroll-section">
@@ -158,13 +169,13 @@ J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à 
 </section>
 
 <section class="scroll-section">
-  <h2 class="section-title">Parent de Léonard</h2>
-  <div class="quote">"[Témoignage à insérer]"</div>
+  <h2 class="section-title">Elise, maman de Léonard</h2>
+  <div class="quote">"Ces coupes sont intéressantes car on croise des gens d ailleurs qui vont donner une nouvelle dimension aux rencontres KATA. le niveau est impressionnant. Quoiqu'il arrive je suis toujours fier de mon fils, qu'il perde ou qu'il gagne , ça lui va et moi aussi."</div>
   <img src="images/parent-leonard.jpg" alt="Parent de Léonard">
 </section>
 
 <section class="scroll-section">
-  <h2 class="section-title">Parent de Thibault</h2>
+  <h2 class="section-title">Mélanie maman de Thibau</h2>
   <div class="quote">"[Témoignage à insérer]"</div>
   <img src="images/parent-thibault.jpg" alt="Parent de Thibault">
 </section>
@@ -192,5 +203,23 @@ J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à 
     <p>Rendez-vous l'année prochaine pour de nouvelles aventures !</p>
   </footer>
 
+  <!-- Sections de contenu avec animation -->
+
+  <!-- JS pour activer les transitions -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section.scroll-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
