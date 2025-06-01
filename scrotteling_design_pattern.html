@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scrolltelling - Championnat Karaté Marseille</title>
   <style>
     :root {
@@ -26,18 +26,21 @@
       position: relative;
       width: 100%;
       min-height: 100vh;
-      padding: 80px 20px;
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+    }
+
+    .scroll-section {
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 1s ease, transform 1s ease;
     }
 
-    section.visible {
+    .scroll-section.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -82,11 +85,6 @@
       margin-bottom: 20px;
     }
 
-    .scroll-section {
-      padding: 60px 20px;
-      background-color: #fff;
-    }
-
     .scroll-section:nth-child(even) {
       background-color: #f2f2f2;
     }
@@ -97,20 +95,41 @@
       padding: 50px 20px;
       text-align: center;
     }
+
+    @media (max-width: 768px) {
+      .parallax h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .quote {
+        padding: 15px;
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+    }
   </style>
-   <audio id="background-audio" autoplay loop muted>
+  <audio id="background-audio" autoplay loop muted>
     <source src="musique-douce.mp3" type="audio/mpeg">
     Votre navigateur ne supporte pas l'audio HTML5.
   </audio>
 </head>
-<body>
+<body onload="document.getElementById('background-audio').muted = false;">
 
-  <section class="parallax hero visible">
+  <section class="parallax hero scroll-section">
     <h1>Championnat de France de Karaté - Marseille</h1>
     <p>Un week-end d’émotions et d'exploits</p>
   </section>
 
-    <section class="scroll-section">
+  <!-- Autres sections de contenu -->
+
+  <section class="scroll-section">
     <h2 class="section-title">Zélie, 3e en Division 2</h2>
     <div class="quote">«J'ai ressenti de la joie de participer à cette compétition, qui en plus était à Marseille et avec ma copine Cléophée ! D'être sur le podium et de me dire que j'en suis arrivée là, même si je n'ai vraiment réalisé que le lendemain.J’ai gagné confiance en moi et je n’ai pas baissé les bras. 
 J'aime le karaté parce que ça m'épanouit. J'aime ce sport parce qu'il bouge. J'apprends à me défendre et à relâcher mes émotions. On a de la chance qu'une championne nous coache. Elle m'a donné pleins de conseils et on a passé de bons moments parce qu'elle est rigolote. Elle était à notre écoute et c'était agréable. » </div>
@@ -203,9 +222,7 @@ J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à 
     <p>Rendez-vous l'année prochaine pour de nouvelles aventures !</p>
   </footer>
 
-  <!-- Sections de contenu avec animation -->
-
-  <!-- JS pour activer les transitions -->
+  <!-- JS pour effet de scroll -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -217,7 +234,7 @@ J'aime le karaté parce que c'est bien de savoir se défendre, qu'on apprend à 
       threshold: 0.1
     });
 
-    document.querySelectorAll('section.scroll-section').forEach(section => {
+    document.querySelectorAll('.scroll-section').forEach(section => {
       observer.observe(section);
     });
   </script>
