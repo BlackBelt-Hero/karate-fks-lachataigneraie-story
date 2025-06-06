@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accueil - La Vie du Club de Karaté</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       background: #f7f7f7;
     }
     header, footer {
@@ -17,47 +19,19 @@
       padding: 2rem;
       text-align: center;
     }
-    .grid-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .story-card {
-      display: flex;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .story-image {
-      width: 40%;
+    .story-card img {
       object-fit: cover;
+      height: 100%;
+      width: 100%;
     }
-    .story-content {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 60%;
-    }
-    .story-title {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .story-link {
-      margin-top: 1rem;
-      text-decoration: none;
+    .btn-custom {
       background: #222;
       color: white;
-      padding: 0.5rem 1rem;
       border-radius: 6px;
-      width: fit-content;
     }
-    .story-link:hover {
+    .btn-custom:hover {
       background: #444;
+      color: white;
     }
   </style>
 </head>
@@ -67,17 +41,23 @@
     <p>L'histoire des pratiquants, parents, animateurs...</p>
   </header>
 
-  <main class="grid-container">
-    <div class="story-card">
-      <img src="images/marseille.jpg" alt="Dojo en activité" class="story-image" />
-      <div class="story-content">
-        <div class="story-title">Championnat de france - Marseille 2025</div>
-        <a href="scrotteling_design_pattern.html" class="story-link">Zelie, Cléophée, Gabin et leurs parents nous racontent</a>
+  <main class="container my-5">
+    <div class="row story-card bg-white rounded shadow overflow-hidden mb-4">
+      <div class="col-md-4 p-0">
+        <img src="images/marseille.jpg" alt="Dojo en activité" class="img-fluid h-100" />
+      </div>
+      <div class="col-md-8 p-4 d-flex flex-column justify-content-center">
+        <h2 class="h5">Championnat de france - Marseille 2025</h2>
+        <a href="scrotteling_design_pattern.html" class="btn btn-custom mt-3 w-auto">Zelie, Cléophée, Gabin et leurs parents nous racontent</a>
       </div>
     </div>
+  </main>
 
   <footer>
     <p>© 2025 - Section Karaté FKS</p>
   </footer>
+
+  <!-- Bootstrap JS Bundle (si nécessaire pour les composants interactifs) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
