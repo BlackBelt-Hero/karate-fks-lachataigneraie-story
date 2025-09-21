@@ -20,18 +20,37 @@
       text-align: center;
     }
     .story-card img {
-    object-fit: cover;
-    width: 100%;
-    height: 300px; /* ajuste cette valeur selon la hauteur de référence */
+      object-fit: cover;
+      width: 100%;
+      height: 300px; /* même hauteur pour toutes les images */
     }
     .btn-custom {
       background: #222;
       color: white;
       border-radius: 6px;
+      position: relative;
+      animation: pulse 1.5s infinite;
     }
     .btn-custom:hover {
       background: #444;
       color: white;
+    }
+    /* Animation pulse */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(215, 38, 56, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(215, 38, 56, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(215, 38, 56, 0); }
+    }
+    /* Flèche animée */
+    .btn-custom::after {
+      content: " ➜";
+      display: inline-block;
+      margin-left: 6px;
+      animation: bounce 1s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
     }
   </style>
 </head>
@@ -47,7 +66,9 @@
       </div>
       <div class="col-md-8 p-4 d-flex flex-column justify-content-center">
         <h2 class="h5">Fin de saison 2025</h2>
-        <a href="fin_de_saison_2025.html" class="btn btn-custom mt-3 w-auto">La saison 2025 se termine en mode festival 🎪🎉 : Forum des associations à La Châtaigneraie 🤝 & fête du FKS 🥋✨ Merci à tous !</a>
+        <a href="fin_de_saison_2025.html" class="btn btn-custom mt-3 w-auto">
+          La saison 2025 se termine en mode festival 🎪🎉 : Forum des associations à La Châtaigneraie 🤝 & fête du FKS 🥋✨ Merci à tous !
+        </a>
       </div>
     </div>
   </main>
@@ -59,7 +80,9 @@
       </div>
       <div class="col-md-8 p-4 d-flex flex-column justify-content-center">
         <h2 class="h5">Championnat de france - Marseille 2025</h2>
-        <a href="scrotteling_design_pattern.html" class="btn btn-custom mt-3 w-auto">Zelie, Cléophée, Gabin et leurs parents nous racontent leur expérience</a>
+        <a href="scrotteling_design_pattern.html" class="btn btn-custom mt-3 w-auto">
+          Zelie, Cléophée, Gabin et leurs parents nous racontent leur expérience
+        </a>
       </div>
     </div>
   </main>
@@ -68,7 +91,7 @@
     <p>© 2025 - Section Karaté FKS</p>
   </footer>
 
-  <!-- Bootstrap JS Bundle (si nécessaire pour les composants interactifs) -->
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
