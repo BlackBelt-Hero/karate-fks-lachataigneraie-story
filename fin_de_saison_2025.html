@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fin de saison 2025 — Vidéo | Section Karaté FKS</title>
+  <meta name="description" content="Revivez la fin de saison 2025 de la section karaté FKS à La Châtaigneraie en vidéo.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --main-color: #d72638; /* couleurs reprises du scrolltelling */
+      --bg-color: #fefefe;
+      --accent-color: #333;
+      --font-main: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+    }
+
+    html, body { background: var(--bg-color); color: var(--accent-color); font-family: var(--font-main); }
+
+    /* Header : cohérent avec la page scrolltelling */
+    header.site-header { background: var(--main-color); color: #fff; padding: 28px 0; text-align: center; /* Centrage du texte */ }
+    header .title { font-size: clamp(1.25rem, 2vw + 1rem, 2rem); margin: 0; }
+    header .subtitle { margin: 4px 0 0; opacity: .9; }
+
+    /* Corps */
+    main { padding: 32px 12px 64px; }
+    .video-card { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.08); padding: 22px; }
+    .video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
+    .video-wrap video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .video-title { font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); margin-top: 18px; color: var(--main-color); }
+    .video-subtitle { margin: 6px 0 0; color: #555; }
+
+    /* Footer : identique aux autres pages (sobre, fond sombre) */
+    footer.site-footer { background: #222; color: #fff; text-align: center; padding: 28px 12px; }
+    .back-link { display: inline-block; margin-top: 14px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header repris du design scrolltelling (couleurs/typo) -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="title">Section Karaté FKS — Fin de saison 2025</h1>
+      <p class="subtitle">Forum des associations · Fête du club · Moments forts</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="video-card">
+      <h2 class="video-title">Vidéo bientôt en ligne</h2>
+      <p class="video-subtitle">Merci aux karatékas, aux familles et aux bénévoles. Respect, effort, esprit d’équipe. 🥋</p>
+        <div class="video-wrap">
+        <!-- Remplacez src/poster par vos fichiers -->
+        <video
+          id="video-fin-saison-2025"
+          controls
+          playsinline
+          preload="metadata"
+          poster="images/fin_saison_2025.jpg"
+        >
+          <source src="videos/fin_saison_2025.mp4" type="video/mp4" />
+          <source src="videos/fin_saison_2025.webm" type="video/webm" />
+          <!-- Piste de sous-titres optionnelle -->
+          <!-- <track label="Français" kind="subtitles" src="videos/fin_saison_2025.vtt" srclang="fr" default /> -->
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+<div class="container">
+<a href="index.html" class="footer-home">← Retour à l’accueil</a>
+<p class="mb-0">© 2025 — Section Karaté FKS</p>
+</div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
