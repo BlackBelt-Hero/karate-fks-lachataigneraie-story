@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fontenay Karaté Shotokan — One Page</title>
+  <meta name="description" content="Force, Respect, Discipline. Cours Enfants, Ados/Adultes, Body Karaté & Sport-Santé à Fontenay-le-Comte." />
+  <style>
+    /* ——— Base ——— */
+    :root { --bg:#0f1115; --ink:#f5f7fb; --muted:#b6bdc9; --accent:#e9b100; --card:#171a20; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink); background:var(--bg); }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1100px, 92%); margin:auto; }
+    .btn { display:inline-block; padding:.9rem 1.2rem; border-radius:999px; background:var(--accent); color:#121212; font-weight:700; }
+    .btn-outline { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+    .stack-m { margin-top:1rem; } .stack-l { margin-top:2rem; } .stack-xl { margin-top:3rem; }
+
+    /* ——— Header ——— */
+    header { position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:rgba(15,17,21,.7); border-bottom:1px solid rgba(255,255,255,.06); }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:.7rem 0; }
+    .nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
+    .nav a { padding:.5rem .7rem; border-radius:10px; color:var(--muted); }
+    .nav a:hover, .nav a[aria-current="page"] { color:var(--ink); background:rgba(255,255,255,.06); }
+
+    /* ——— Sections ——— */
+    section { padding:80px 0; border-bottom:1px solid rgba(255,255,255,.06); }
+    section.hero { padding:120px 0 100px; background:linear-gradient(180deg,#12151b, #0f1115); text-align:center; }
+    .kicker { text-transform:uppercase; letter-spacing:.12em; color:var(--muted); font-size:.8rem; }
+    h1 { font-size:clamp(2rem, 3.5vw, 3rem); margin:.5rem 0; }
+    h2 { font-size:clamp(1.6rem, 2.6vw, 2.2rem); margin:0; }
+    p.lead { color:var(--muted); font-size:1.05rem; }
+
+    /* ——— Grids / Cards ——— */
+    .grid { display:grid; gap:1rem; }
+    .g-2 { grid-template-columns:repeat(2,1fr); }
+    .g-3 { grid-template-columns:repeat(3,1fr); }
+    .card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:1.2rem; }
+    .tag { display:inline-block; font-size:.75rem; padding:.25rem .6rem; border:1px solid rgba(255,255,255,.15); border-radius:999px; color:var(--muted); }
+
+    /* ——— Footer ——— */
+    footer { padding:40px 0; color:var(--muted); }
+
+    /* ——— Responsive ——— */
+    @media (max-width:900px){ .g-2,.g-3{ grid-template-columns:1fr; } header .nav ul { gap:.4rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Navigation principale">
+      <a href="#top" class="logo" aria-label="Accueil FKS">
+        <strong>FKS</strong>
+      </a>
+      <ul>
+        <li><a href="#valeurs">Le club</a></li>
+        <li><a href="#cours">Cours</a></li>
+        <li><a href="#excellence">Excellence</a></li>
+        <li><a href="#soutenir">Soutenir</a></li>
+        <li><a href="#actus">Actus</a></li>
+        <li><a href="#infos">Infos</a></li>
+        <li><a class="btn" href="#contact">Essai gratuit</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="hero" aria-label="Accueil">
+    <div class="container">
+      <div class="kicker">Fontenay Karaté Shotokan</div>
+      <h1>Force. Respect. Discipline.</h1>
+      <p class="lead">Cours Enfants, Ados/Adultes et Sport-Santé à Fontenay-le-Comte. Venez essayer gratuitement, kimono ou tenue de sport, on s’occupe du reste.</p>
+      <div class="stack-l">
+        <a class="btn" href="#cours">Découvrir les cours</a>
+        <span style="display:inline-block; width:.6rem;"></span>
+        <a class="btn btn-outline" href="#contact">S’inscrire / Essai gratuit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS / LE CLUB -->
+  <section id="valeurs" aria-labelledby="h-valeurs">
+    <div class="container">
+      <h2 id="h-valeurs">L’esprit du dojo</h2>
+      <p class="lead stack-m">Tradition Shotokan, pédagogie bienveillante, progression pour tous. Encadrement diplômé, ambiance familiale, exigence sportive.</p>
+
+      <div class="grid g-3 stack-l">
+        <div class="card">
+          <div class="tag">Respect</div>
+          <h3>Des valeurs fortes</h3>
+          <p>Politesse, courage, maîtrise de soi. Le karaté comme école de vie.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Encadrement</div>
+          <h3>Professeurs & gradés</h3>
+          <p><!-- TODO: Noms du staff + grades -->Encadrants diplômés, préparation technique et physique adaptées à chaque âge.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Communauté</div>
+          <h3>Vie du club</h3>
+          <p>Stages, compétitions, événements locaux. Un dojo qui vit au rythme des adhérents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURS -->
+  <section id="cours" aria-labelledby="h-cours">
+    <div class="container">
+      <h2 id="h-cours">Les cours</h2>
+      <p class="lead stack-m">Choisis ton format. Un essai gratuit pour te faire une idée.</p>
+
+      <div class="grid g-3 stack-l">
+        <article class="card" aria-labelledby="c-enfants">
+          <div class="tag">4–11 ans</div>
+          <h3 id="c-enfants">Enfants</h3>
+          <p><!-- TODO: Horaires précis -->Coordination, respect, confiance. Groupes par âge/niveau.</p>
+          <ul>
+            <li>Mer ⟶ 17:00–18:00</li>
+            <li>Sam ⟶ 10:00–11:00</li>
+          </ul>
+          <div class="stack-m">
+            <a class="btn" href="#contact">Essai gratuit</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="c-ados">
+          <div class="tag">12+ ans</div>
+          <h3 id="c-ados">Ados / Adultes</h3>
+          <p>Technique, kata, kumite. Prépa passages de grades, compétition en option.</p>
+          <ul>
+            <li>Mar & Ven ⟶ 19:00–20:30</li>
+          </ul>
+          <div class="stack-m">
+            <a class="btn" href="#contact">Rejoindre le cours</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="c-sportsante">
+          <div class="tag">Bien-être</div>
+          <h3 id="c-sportsante">Body Karaté / Sport-Santé</h3>
+          <p>Cardio doux, mobilité, posture. Idéal reprise d’activité & santé.</p>
+          <ul>
+            <li>Jeu ⟶ 18:30–19:30</li>
+          </ul>
+          <div class="stack-m">
+            <a class="btn" href="#contact">Je teste</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXCELLENCE SPORTIVE -->
+  <section id="excellence" aria-labelledby="h-excellence">
+    <div class="container">
+      <h2 id="h-excellence">Excellence sportive</h2>
+      <p class="lead stack-m">Parcours compétiteurs & sections Sport-Études (collège / lycée). Résultats, sélections, podiums.</p>
+
+      <div class="grid g-2 stack-l">
+        <div class="card">
+          <div class="tag">Compétiteurs</div>
+          <h3>Équipe & palmarès</h3>
+          <p><!-- TODO: Palmarès & photos -->Accompagnement technique, prépa mentale & physique.</p>
+          <a class="btn btn-outline stack-m" href="#contact">Intégrer le groupe</a>
+        </div>
+        <div class="card">
+          <div class="tag">Sport-Études</div>
+          <h3>Collège / Lycée</h3>
+          <p><!-- TODO: Établissements, horaires -->Aménagements scolaires, suivi, objectifs compétitifs.</p>
+          <a class="btn btn-outline stack-m" href="#contact">Candidater</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOUTENIR -->
+  <section id="soutenir" aria-labelledby="h-soutenir">
+    <div class="container">
+      <h2 id="h-soutenir">Soutenir le FKS</h2>
+      <p class="lead stack-m">Entreprises, parents, bénévoles — vous faites la différence.</p>
+
+      <div class="grid g-3 stack-l">
+        <div class="card">
+          <div class="tag">Sponsors</div>
+          <h3>Partenariats</h3>
+          <p>Visibilité locale & régionale, événements, maillots, réseaux sociaux.</p>
+          <a class="btn btn-outline stack-m" href="#contact">Devenir partenaire</a>
+        </div>
+        <div class="card">
+          <div class="tag">Mécénat</div>
+          <h3>Dons & reçus fiscaux</h3>
+          <p><!-- TODO: Modalités fiscales -->Soutenez la pratique & l’excellence — avantages fiscaux.</p>
+          <a class="btn btn-outline stack-m" href="#contact">Nous contacter</a>
+        </div>
+        <div class="card">
+          <div class="tag">Bénévolat</div>
+          <h3>Aider le club</h3>
+          <p>Compétitions, logistique, communication. Une heure, c’est déjà beaucoup.</p>
+          <a class="btn btn-outline stack-m" href="#contact">Je m’engage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTUS -->
+  <section id="actus" aria-labelledby="h-actus">
+    <div class="container">
+      <h2 id="h-actus">Actualités</h2>
+      <p class="lead stack-m">Les 3 dernières nouvelles du dojo.</p>
+
+      <div class="grid g-3 stack-l">
+        <!-- Remplacer chaque bloc par un lien vers l’article Wix/Blog -->
+        <article class="card">
+          <div class="tag">Résultats</div>
+          <h3>[Titre Actu #1]</h3>
+          <p>[Résumé court — 2 lignes max.]</p>
+          <a class="btn btn-outline stack-m" href="#">Lire</a>
+        </article>
+        <article class="card">
+          <div class="tag">Événement</div>
+          <h3>[Titre Actu #2]</h3>
+          <p>[Résumé court — 2 lignes max.]</p>
+          <a class="btn btn-outline stack-m" href="#">Lire</a>
+        </article>
+        <article class="card">
+          <div class="tag">Dojo</div>
+          <h3>[Titre Actu #3]</h3>
+          <p>[Résumé court — 2 lignes max.]</p>
+          <a class="btn btn-outline stack-m" href="#">Lire</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES -->
+  <section id="infos" aria-labelledby="h-infos">
+    <div class="container">
+      <h2 id="h-infos">Infos pratiques</h2>
+
+      <div class="grid g-2 stack-l">
+        <div class="card">
+          <div class="tag">Tarifs</div>
+          <h3>Adhésion & licence</h3>
+          <ul>
+            <li>Enfants — XX € / an</li>
+            <li>Ados / Adultes — XX € / an</li>
+            <li>Sport-Santé — XX € / an</li>
+          </ul>
+          <p class="stack-m"><em><!-- TODO: Facilités de paiement, réductions famille, essai gratuit --></em></p>
+        </div>
+        <div class="card">
+          <div class="tag">Horaires</div>
+          <h3>Planning</h3>
+          <ul>
+            <li>Lun — …</li><li>Mar — …</li><li>Mer — …</li><li>Jeu — …</li><li>Ven — …</li><li>Sam — …</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid g-2 stack-l">
+        <div class="card">
+          <div class="tag">Accès</div>
+          <h3>Adresse & plan</h3>
+          <p><!-- TODO: Adresse complète -->[Adresse du dojo, parking, transports]</p>
+          <!-- Map (remplacer src par la vraie carte Google Maps) -->
+          <div class="stack-m">
+            <iframe title="Plan d'accès" src="#" width="100%" height="220" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Contacts</div>
+          <h3>Nous joindre</h3>
+          <ul>
+            <li>Tél : <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a></li>
+            <li>Email : <a href="mailto:contact@fontenaykarateshotokan.fr">contact@fontenaykarateshotokan.fr</a></li>
+            <li>Réseaux : <a href="#" aria-label="Facebook">Facebook</a> · <a href="#" aria-label="Instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / ESSAI -->
+  <section id="contact" aria-labelledby="h-contact">
+    <div class="container">
+      <h2 id="h-contact">S’inscrire / Essai gratuit</h2>
+      <p class="lead stack-m">Laisse tes coordonnées, on te rappelle. Tu peux venir à la prochaine séance.</p>
+
+      <form class="card stack-l" action="#" method="post" aria-label="Formulaire d'inscription">
+        <!-- Remplacer par le formulaire Wix / webhook / email -->
+        <div class="grid g-2">
+          <label>Prénom<br><input required name="prenom" placeholder="Prénom" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);" /></label>
+          <label>Nom<br><input required name="nom" placeholder="Nom" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);" /></label>
+        </div>
+        <div class="grid g-2 stack-m">
+          <label>Email<br><input required type="email" name="email" placeholder="nom@email.fr" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);" /></label>
+          <label>Téléphone<br><input required name="tel" placeholder="06 xx xx xx xx" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);" /></label>
+        </div>
+        <label class="stack-m">Je suis intéressé(e) par<br>
+          <select name="interet" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);">
+            <option>Essai gratuit</option>
+            <option>Cours Enfants</option>
+            <option>Cours Ados/Adultes</option>
+            <option>Body Karaté / Sport-Santé</option>
+            <option>Parcours compétiteur</option>
+            <option>Section Sport-Études</option>
+            <option>Devenir partenaire / mécène</option>
+          </select>
+        </label>
+        <label class="stack-m">Message<br>
+          <textarea name="message" rows="4" placeholder="Votre question..." style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0c0f14;color:var(--ink);"></textarea>
+        </label>
+
+        <div class="stack-m"><button class="btn" type="submit">Envoyer</button></div>
+        <p class="stack-m" style="color:var(--muted); font-size:.9rem;">En envoyant ce formulaire, vous acceptez d’être recontacté(e). <a href="#mentions">Mentions légales</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="mentions" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Fontenay Karaté Shotokan — Tous droits réservés.</p>
+      <p class="stack-m">Site one-page — <a href="#top">Retour en haut</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Année auto
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Active link highlight on scroll (simple)
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = [...document.querySelectorAll('header .nav a')];
+    const setActive = () => {
+      const y = window.scrollY + 120;
+      let current = sections.findLast(s => s.offsetTop <= y);
+      navLinks.forEach(a => a.removeAttribute('aria-current'));
+      if (current) {
+        const link = navLinks.find(a => a.getAttribute('href') === `#${current.id}`);
+        if (link) link.setAttribute('aria-current', 'page');
+      }
+    };
+    document.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+  </script>
+</body>
+</html>
